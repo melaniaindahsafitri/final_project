@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Fruity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_desk">image_desk</string>
+    <string name="ket">ket</string>
+    <string name="isi_ket">isi_ket</string>
+    <string name="buah_image">buah_image</string>
+    <string name="apel">Apel</string>
+    <string name="apple">Apple</string>
+    <string name="image_of_fruit">Image of Fruit</string>
+    <string name="isi_nama_bindo">isi_nama_bindo</string>
+    <string name="nama_buah_bindo">Nama Buah dalam Bhs.Indonesia</string>
+    <string name="nama_buah_bing">Nama Buah dalam Bhs.Inggris</string>
+    <string name="isi_manfaat">Isi Manfaat</string>
+    <string name="nama_warna_buah">Nama Warna Buah</string>
+</resources>

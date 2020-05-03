@@ -1,0 +1,72 @@
+[
+{
+	"nama_bindo":"APEL",
+	"nama_bing":"APPLE",
+	"warna" : "MERAH",
+	"manfaat" : "Buah apel banyak mengandung antioksidan yang bisa mengurangi resiko terkena kanker",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/APEL.png"
+},
+{
+	"nama_bindo":"PISANG",
+	"nama_bing":"BANANA",
+	"warna" : "KUNING",
+	"manfaat" : "Buah pisang banyak mengandung vitamin B6 yang baik untuk kesehatan kulit",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/PISANG.png"
+},
+{
+	"nama_bindo":"CERI",
+	"nama_bing":"CHERRY",
+	"warna" : "MERAH",
+	"manfaat" : "Buah ceri banyak mengandung anti-inflamasi yang berguna untuk menjaga tubuh tetap sehat",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/CERI.png"
+},
+{
+	"nama_bindo":"KIWI",
+	"nama_bing":"KIWI",
+	"warna" : "HIJAU",
+	"manfaat" : "Buah kiwi banyak mengandung vitamin C yang baik untuk meningkatkan daya tahan tubuh",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/KIWI.png"
+},
+{
+	"nama_bindo":"ANGGUR",
+	"nama_bing":"GRAPE",
+	"warna" : "UNGU",
+	"manfaat" : "Buah anggur banyak mengandung vitamin K yang baik untuk menjaga kesehatan tulang",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/ANGGUR.png"
+},
+{
+	"nama_bindo":"MANGGA",
+	"nama_bing":"MANGO",
+	"warna" : "KUNING",
+	"manfaat" : "Buah mangga banyak mengandung serat yang baik untuk mengatasi sembelit",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/MANGGA.png"
+},
+{
+	"nama_bindo":"STROBERI",
+	"nama_bing":"STRAWBERRY",
+	"warna" : "MERAH",
+	"manfaat" : "Buah stroberi banyak mengandung vitamin C yang baik untuk meningkatkan daya tahan tubuh",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/STROBERI.png"
+},
+{
+	"nama_bindo":"JAMBU",
+	"nama_bing":"GUAVA",
+	"warna" : "MERAH MUDA",
+	"manfaat" : "Buah jambu banyak mengandung serat yang baik untuk melancarkan saluran pencernaan",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/JAMBU.png"
+},
+{
+	"nama_bindo":"NANAS",
+	"nama_bing":"PINEAPPLE",
+	"warna" : "KUNING",
+	"manfaat" : "Buah nanas banyak mengandung kalium yang baik untuk menjaga keseimbangan cairan dalam tubuh",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/NANAS.png"
+},
+{
+	"nama_bindo":"SEMANGKA",
+	"nama_bing":"WATERMELON",
+	"warna" : "MERAH",
+	"manfaat" : "Buah semangka banyak mengandung vitamin A yang baik untuk kesehatan mata",
+	"imgURL" : "https://raw.githubusercontent.com/melaniaindahsafitri/gambar-buah/gambar_buah/SEMANGKA.jpg"
+}
+]
