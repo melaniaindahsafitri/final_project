@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/listviewFragment"
-        android:name="org.d3if4009.bismillahmobprokelar.overView.listViewFragment"
+        android:name="org.d3if4009.bismillahmobprokelar.overView.ListViewFragment"
         android:label="listviewFragment" >
         <action
             android:id="@+id/action_listviewFragment_to_detailFragment"
@@ -13,6 +13,11 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="org.d3if4009.bismillahmobprokelar.detail.detailFragment"
-        android:label="detailFragment" />
+        android:name="org.d3if4009.bismillahmobprokelar.detail.DetailFragment"
+        android:label="detailFragment">
+        <argument
+            android:name="SELECTED_DETAIL_PROPERTY"
+            app:argType="org.d3if4009.bismillahmobprokelar.network.BuahProperty"
+            />
+    </fragment>
 </navigation>

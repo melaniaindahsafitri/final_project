@@ -3,18 +3,18 @@ package org.d3if4009.bismillahmobprokelar.overView
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 
 import org.d3if4009.bismillahmobprokelar.R
 import org.d3if4009.bismillahmobprokelar.databinding.FragmentListViewBinding
-import org.d3if4009.bismillahmobprokelar.overView.listViewAdapter
-import org.d3if4009.bismillahmobprokelar.overView.listViewModel
 
 
-class listViewFragment : Fragment() {
+class ListViewFragment : Fragment() {
 
-    private val viewModel: listViewModel by lazy {
-        ViewModelProviders.of(this).get(listViewModel::class.java)
+    private val viewModel: ListViewModel by lazy {
+        ViewModelProviders.of(this).get(ListViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -27,7 +27,17 @@ class listViewFragment : Fragment() {
         binding.setLifecycleOwner (this)
          binding.viewModel = viewModel
 
-        binding.rvItemList.adapter = listViewAdapter()
+        binding.rvItemList.adapter = ListViewAdapter(ListViewAdapter.OnClickListener{
+           viewModel.displayItemDetails(it)
+        })
+
+        viewModel.navigateToSelectedItem.observe(this, Observer {
+            if(null != it){
+                this.findNavController().navigate(
+                   ListViewFragmentDirections.actionListviewFragmentToDetailFragment(it))
+                viewModel.displayItemDetailsComplete()
+            }
+        })
 
         setHasOptionsMenu(true)
         return binding.root

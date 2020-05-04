@@ -8,6 +8,7 @@
             name="property"
             type="org.d3if4009.bismillahmobprokelar.network.BuahProperty" />
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

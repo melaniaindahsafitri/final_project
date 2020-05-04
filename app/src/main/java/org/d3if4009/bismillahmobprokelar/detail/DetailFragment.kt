@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
+
 import org.d3if4009.bismillahmobprokelar.databinding.FragmentDetailBinding
 
 
-/**
- * A simple [Fragment] subclass.
- */
-class detailFragment : Fragment() {
+class DetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,7 +21,13 @@ class detailFragment : Fragment() {
         val binding = FragmentDetailBinding.inflate(inflater)
         binding.setLifecycleOwner(this)
 
+        val BuahProperty = DetailFragmentArgs.fromBundle(arguments!!).SELECTEDDETAILPROPERTY
+        val viewModelFactory = DetailViewModelFactory(BuahProperty, application)
+
+        binding.viewModel = ViewModelProviders.of(
+            this,viewModelFactory).get(DetailViewModel::class.java)
+
         return binding.root
     }
-
 }
+

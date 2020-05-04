@@ -11,11 +11,13 @@ import org.d3if4009.bismillahmobprokelar.network.BuahApiService
 import org.d3if4009.bismillahmobprokelar.network.BuahProperty
 import java.lang.Exception
 
-class listViewModel : ViewModel() {
+enum class buahApiStatus { LOADING, ERROR, DONE }
 
-    private val _response = MutableLiveData<String>()
-    val response: LiveData<String>
-    get() = _response
+class ListViewModel : ViewModel() {
+
+    private val _status = MutableLiveData<buahApiStatus>()
+    val status: LiveData<buahApiStatus>
+    get() = _status
 
     private var viewModelJob = Job()
     private val coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
@@ -23,6 +25,10 @@ class listViewModel : ViewModel() {
     private val _properties = MutableLiveData<List<BuahProperty>>()
     val properties: LiveData<List<BuahProperty>>
     get() = _properties
+
+    private val _navigateToSelectedItem = MutableLiveData<BuahProperty>()
+    val navigateToSelectedItem : LiveData<BuahProperty>
+    get() = _navigateToSelectedItem
 
     init {
         getDataBuah()
@@ -32,15 +38,25 @@ class listViewModel : ViewModel() {
         coroutineScope.launch {
             var getPropertiesDeffered = BuahApiService.BuahApi.retrofitService.getProperties()
             try {
+                _status.value = buahApiStatus.LOADING
                 var listResult = getPropertiesDeffered.await()
-                _response.value = "Success: ${listResult.size} Fruit properties retrieved"
-                if (listResult.size>0){
+                _status.value = buahApiStatus.DONE
+                if(listResult.size > 0){
                     _properties.value = listResult
                 }
             }catch (e: Exception){
-                _response.value = "Failed: ${e.message}"
+                _status.value = buahApiStatus.ERROR
+                _properties.value = ArrayList()
             }
         }
+    }
+
+    fun displayItemDetails(BuahProperty: BuahProperty){
+        _navigateToSelectedItem.value = BuahProperty
+    }
+
+    fun displayItemDetailsComplete(){
+        _navigateToSelectedItem.value = null
     }
 
     override fun onCleared() {

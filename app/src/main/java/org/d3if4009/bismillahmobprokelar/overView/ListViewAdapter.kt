@@ -9,13 +9,13 @@ import org.d3if4009.bismillahmobprokelar.databinding.RecyclerviewListItemBinding
 import org.d3if4009.bismillahmobprokelar.network.BuahProperty
 
 
-class listViewAdapter : ListAdapter<BuahProperty,
-        listViewAdapter.BuahPropertyViewHolder>(DiffCallback) {
+class ListViewAdapter(private val onClickListener: OnClickListener) : ListAdapter<BuahProperty,
+        ListViewAdapter.BuahPropertyViewHolder>(DiffCallback){
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): listViewAdapter.BuahPropertyViewHolder {
+    ): ListViewAdapter.BuahPropertyViewHolder {
         return BuahPropertyViewHolder(
             RecyclerviewListItemBinding.inflate(
                 LayoutInflater.from(parent.context)
@@ -24,7 +24,7 @@ class listViewAdapter : ListAdapter<BuahProperty,
     }
 
     override fun onBindViewHolder(
-        holder: listViewAdapter.BuahPropertyViewHolder,
+        holder: ListViewAdapter.BuahPropertyViewHolder,
         position: Int
     ) {
         val BuahProperty = getItem(position)
@@ -43,7 +43,7 @@ class listViewAdapter : ListAdapter<BuahProperty,
             oldItem: BuahProperty,
             newItem: BuahProperty
         ): Boolean {
-            return oldItem.nama_bindo == newItem.nama_bindo
+            return oldItem.id == newItem.id
         }
     }
 
@@ -55,4 +55,8 @@ class listViewAdapter : ListAdapter<BuahProperty,
                 binding.executePendingBindings()
             }
         }
+
+    class OnClickListener(val clickListener: (BuahProperty: BuahProperty)-> Unit){
+        fun onClick(BuahProperty: BuahProperty) = clickListener(BuahProperty)
     }
+}
