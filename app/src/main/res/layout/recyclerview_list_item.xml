@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/apel"
+        android:text="@{property.nama_bindo}"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/img_buah"
         app:layout_constraintTop_toTopOf="@+id/img_buah" />
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:maxLines="2"
-        android:text="@string/apple"
+        android:text="@{property.nama_bing}"
         app:layout_constraintStart_toStartOf="@+id/tv_nama_buah"
         app:layout_constraintTop_toBottomOf="@+id/tv_nama_buah" />
 

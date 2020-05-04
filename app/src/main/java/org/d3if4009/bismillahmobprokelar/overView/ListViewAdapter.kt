@@ -28,6 +28,9 @@ class ListViewAdapter(private val onClickListener: OnClickListener) : ListAdapte
         position: Int
     ) {
         val BuahProperty = getItem(position)
+        holder.itemView.setOnClickListener{
+            onClickListener.onClick(BuahProperty)
+        }
         holder.bind(BuahProperty)
     }
 
@@ -43,7 +46,7 @@ class ListViewAdapter(private val onClickListener: OnClickListener) : ListAdapte
             oldItem: BuahProperty,
             newItem: BuahProperty
         ): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.nama_bindo == newItem.nama_bindo
         }
     }
 

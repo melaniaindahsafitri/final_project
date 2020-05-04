@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class BuahProperty(
-    val id: String,
+
     val nama_bindo : String,
     val nama_bing : String,
     val warna : String,

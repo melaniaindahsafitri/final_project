@@ -20,4 +20,8 @@
             app:argType="org.d3if4009.bismillahmobprokelar.network.BuahProperty"
             />
     </fragment>
+    <fragment
+        android:id="@+id/about2"
+        android:name="org.d3if4009.bismillahmobprokelar.about"
+        android:label="about" />
 </navigation>

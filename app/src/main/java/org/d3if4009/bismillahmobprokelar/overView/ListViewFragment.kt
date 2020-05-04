@@ -2,6 +2,7 @@ package org.d3if4009.bismillahmobprokelar.overView
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -26,6 +27,8 @@ class ListViewFragment : Fragment() {
 
         binding.setLifecycleOwner (this)
          binding.viewModel = viewModel
+
+        (activity as AppCompatActivity).supportActionBar?.title = "My Fruity"
 
         binding.rvItemList.adapter = ListViewAdapter(ListViewAdapter.OnClickListener{
            viewModel.displayItemDetails(it)

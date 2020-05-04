@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 
 import org.d3if4009.bismillahmobprokelar.databinding.FragmentDetailBinding
@@ -13,6 +14,7 @@ import org.d3if4009.bismillahmobprokelar.databinding.FragmentDetailBinding
 class DetailFragment : Fragment() {
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -24,10 +26,13 @@ class DetailFragment : Fragment() {
         val BuahProperty = DetailFragmentArgs.fromBundle(arguments!!).SELECTEDDETAILPROPERTY
         val viewModelFactory = DetailViewModelFactory(BuahProperty, application)
 
+        (activity as AppCompatActivity).supportActionBar?.title = BuahProperty.nama_bindo
+
         binding.viewModel = ViewModelProviders.of(
             this,viewModelFactory).get(DetailViewModel::class.java)
 
         return binding.root
     }
+
 }
 

@@ -17,18 +17,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".detail.DetailFragment">
+
         <ImageView
             android:id="@+id/img_buah"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="367dp"
+            android:layout_height="374dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:contentDescription="@string/image_of_fruit"
             android:src="@drawable/ic_launcher_foreground"
+            app:imageUrl="@{viewModel.selectedItem.imgSrcUrl}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/image_of_fruit" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/carview_keterangan"
@@ -46,30 +48,69 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/buah_bindo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Buah(INDONESIA)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
                     android:id="@+id/tv_nama_buah"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/nama_buah_bindo"
+                    android:text="@{viewModel.selectedItem.nama_bindo}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                <TextView
+                    android:id="@+id/buah_bing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Buah(INGGRIS)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
                 <TextView
                     android:id="@+id/tv_nama_bing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/nama_buah_bing"/>
+                    android:text="@{viewModel.selectedItem.nama_bing}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                <TextView
+                    android:id="@+id/warna_buah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Warna Buah"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
                 <TextView
                     android:id="@+id/warna"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/nama_warna_buah"/>
+                    android:text="@{viewModel.selectedItem.warna}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                <TextView
+                    android:id="@+id/manfaat_buah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manfaat Buah"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
                 <TextView
                     android:id="@+id/manfaat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/isi_manfaat"/>
+                    android:text="@{viewModel.selectedItem.manfaat}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
