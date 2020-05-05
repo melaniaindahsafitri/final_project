@@ -21,7 +21,7 @@
             />
     </fragment>
     <fragment
-        android:id="@+id/about2"
-        android:name="org.d3if4009.bismillahmobprokelar.about"
+        android:id="@+id/about"
+        android:name="org.d3if4009.bismillahmobprokelar.About"
         android:label="about" />
 </navigation>

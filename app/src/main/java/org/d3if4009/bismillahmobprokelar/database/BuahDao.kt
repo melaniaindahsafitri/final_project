@@ -1,10 +1,8 @@
 package org.d3if4009.bismillahmobprokelar.database
 
+import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.OnConflictStrategy
+import androidx.room.*
 
 @Dao
 interface BuahDao {

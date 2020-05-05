@@ -23,10 +23,12 @@ private val retrofit = Retrofit.Builder()
 interface BuahApiService{
 
     @GET("fruit.json")
+
     fun getProperties(): Deferred<List<BuahProperty>>
+
     object BuahApi{
         val retrofitService : BuahApiService by lazy {
             retrofit.create(BuahApiService::class.java)
         }
     }
-}
+    }
